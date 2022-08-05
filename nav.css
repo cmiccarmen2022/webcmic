@@ -1,0 +1,566 @@
+@charset "UTF-8";
+.navigation {
+    height: 70px;
+    background: #ffffff;
+}
+
+/* Quitamos margen y relleno de la página */
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.brand {
+    position: absolute;
+    padding-left: 20px;
+    float: left;
+    line-height: 70px;
+    text-transform: uppercase;
+    font-size: 1.4em;
+}
+.brand a,
+.brand a:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+.brand a img{
+    height: 35px;
+    margin-top: 20px;
+}
+.nav-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+nav {
+    float: right;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    float: left;
+    position: relative;
+}
+nav ul li a,
+nav ul li a:visited {
+    display: block;
+    padding: 0 20px;
+    line-height: 70px;
+    background: #ffffff;
+    color: #000000;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+nav ul li a:hover,
+nav ul li a:visited:hover {
+    background: #d41d36;
+    border-radius: 3px;
+    color: #ffffff;
+}
+
+nav ul li a.comite-damas:hover,
+nav ul li a.comite-damas:visited:hover {
+    background: #c23ad4;
+    border-radius: 3px;
+    color: #ffffff;
+}
+
+nav ul li a:not(:only-child):after,
+nav ul li a:visited:not(:only-child):after {
+    padding-left: 3px;
+    content: " ▾";
+}
+nav ul li ul li {
+    min-width: 190px;
+}
+nav ul li ul li a {
+    padding: 15px;
+    line-height: 20px;
+}
+
+.nav-dropdown {
+    position: absolute;
+    display: none;
+    z-index: 1;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+/* Estilamos la navegación movil aplicando recuros de responsive design */
+.nav-mobile {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ffffff;
+    height: 70px;
+    width: 70px;
+}
+
+@media only screen and (max-width: 798px) {
+    .nav-mobile {
+    display: block;
+    }
+    nav {
+        width: 100%;
+        padding: 70px 0 15px;
+    }
+    nav ul {
+        display: none;
+    }
+    nav ul li {
+        float: none;
+    }
+    nav ul li a {
+        padding: 15px;
+        line-height: 20px;
+    }
+    
+    }
+    nav ul li ul li a {
+        padding-left: 30px;
+    }
+    .nav-dropdown {
+        position: absolute;
+    }
+
+    /* Adaptamos a otras pantallas */
+
+    @media screen and (min-width: 799px) {
+    .nav-list {
+        display: block !important;
+    }
+    }
+    #nav-toggle {
+    position: absolute;
+    left: 18px;
+    top: 22px;
+    cursor: pointer;
+    padding: 10px 35px 16px 0px;
+    }
+    #nav-toggle span,
+    #nav-toggle span:before,
+    #nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
+    height: 5px;
+    width: 35px;
+    background: #0c021f;
+    position: absolute;
+    display: block;
+    content: "";
+    transition: all 300ms ease-in-out;
+    }
+    #nav-toggle span:before {
+    top: -10px;
+    }
+    #nav-toggle span:after {
+    bottom: -10px;
+    }
+    #nav-toggle.active span {
+    background-color: transparent;
+    }
+    #nav-toggle.active span:before, #nav-toggle.active span:after {
+    top: 0;
+    }
+    #nav-toggle.active span:before {
+    transform: rotate(45deg);
+    }
+    #nav-toggle.active span:after {
+    transform: rotate(-45deg);
+    }
+
+    article {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px;
+    }
+
+
+/* Estilización de la sección slider */
+
+#slider {
+    max-width: 500px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.title h3{
+    font-family: sans-serif;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+}
+
+#overflow {
+    width: 100%;
+    overflow: hidden;
+}
+
+#slides .inner {
+    width: 400%;
+}
+
+#slides .inner {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+
+    -webkit-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -moz-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -o-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -ms-transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    transition: all 800ms cubic-bezier(0.770, 0.000, 0.175, 1.000);
+
+    -webkit-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -moz-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -o-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    -ms-transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+    transition-timing-function: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+}
+
+#slides img {
+    margin-top: 10px;
+    width: 25%;
+    float: left;
+}
+
+#slide1:checked ~ #slides .inner {
+    margin-left: 0;
+}
+
+#slide2:checked ~ #slides .inner {
+    margin-left: -100%;
+}
+
+#slide3:checked ~ #slides .inner {
+    margin-left: -200%;
+}
+
+#slide4:checked ~ #slides .inner {
+    margin-left: -300%;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+label {
+    margin: 5px;
+    background: #CCC;
+    display: inline-block;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+#slide1:checked ~ label[for="slide1"],
+#slide2:checked ~ label[for="slide2"],
+#slide3:checked ~ label[for="slide3"],
+#slide4:checked ~ label[for="slide4"]
+{
+    background: #333;
+}
+
+
+
+/* Comenzamos a estilar el contenido general de la página principal */
+
+    .texto h2{
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+
+    ul{
+    list-style: none;
+    }
+
+    .colorh2{
+    color: #581353;
+    }
+
+    button{
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    box-shadow: 2px 2px 9px #ffffff;
+    color: #ffffff;
+    background: linear-gradient(328deg, rgb(219, 24, 24) 35%, rgba(0,0,0,1) 65%);
+    }
+
+    button:hover{
+    color: #ffffff;
+    background: linear-gradient(328deg, rgba(0,0,0,1) 35%, rgb(219, 24, 24) 65%);
+    }
+    
+
+
+    .container{
+    max-width: 1200px;
+    margin: auto;
+    }    
+
+    #Somos-English .container{
+    text-align: center;
+    padding: 100px 12px;
+    }
+
+    .colorh2{
+        color: #ff2020;
+    }
+
+    #cursos-cards{
+    background-color: #000000;
+    color: #ffffff;
+    text-align: center;
+    }
+
+    #cursos-cards .container{
+    padding: 120px 12px;
+    }
+
+    #cursos-cards h2{
+    margin-top: 0;
+    font-size: 20px;
+    margin-bottom: 30px;
+    }
+
+    
+    #cursos-cards h3{
+    font-family: sans-serif;
+    font-size: 16px;
+    
+    }
+
+    #cursos-cards p{
+    margin-top: 5px;
+    font-size: 13px;
+    display: none;
+    text-align: justify;
+    }
+
+    #cursos-cards .cards button{
+        margin-top: 10px;
+    }
+
+    #cursos-cards .cards{
+    background-position: center center;
+    background-size: cover;
+    padding: 50px 0px;
+    margin: 40px; 
+    border-radius: 15px;
+    }
+
+    .cards:first-child{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8)
+    )
+    ,url("logo-oficial.jpg");    
+    }
+
+    .cards:nth-child(2){
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8)
+    )
+    ,url("logo-oficial.jpg");
+    }
+
+    .cards:nth-child(3){
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8)
+    )
+    ,url("logo-oficial.jpg");
+    }
+
+    #caracteristicas .container{
+    text-align: center;
+    padding: 150px 12px;
+    }
+
+
+    i{
+        margin-right: 10px;
+    }
+
+    #aplica{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000000;
+    color: #ffffff;
+    height: 30vh;
+    margin-bottom: 0px;
+    }
+
+    #aplica h2{
+        font-size: 19px;
+    }
+    #aplica button{
+        margin-top: 20px;
+    }
+
+    #caracteristicas .container{
+        width: 90%;
+        margin: auto;
+    }
+
+    li{
+        font-size: 15px;
+    }
+
+    #caracteristicas .container ul li{
+        margin-top: 10px;
+    }
+
+    /* ESTILIZACIÓN DE FOOTER */
+    footer{
+        background-color: #ff2020;
+    }
+
+    footer p{
+    margin: 0;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 12px;
+    padding: 12px;
+    color: #ffffff;
+    }
+
+    footer .container{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+
+    @media (min-width: 900px){
+
+    #Somos-English .container{
+    display: flex;
+    justify-content: center;
+    }
+
+    #Somos-English .img-container{
+    background-image: linear-gradient(
+    0deg,
+    rgba(0,0,0,0.2),
+    rgba(0,0,0,0.2)
+    )
+    ,url("6.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 300px;
+    width: 480px;  
+    border-radius: 10px; 
+    }
+
+    #Somos-English .texto{
+    width: 50%;
+    max-width: 600px;
+    text-align: justify;
+    padding: 0px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 50px;
+    }
+
+    #cursos-cards .cursos{
+    display: flex;
+    justify-content: center;
+    }
+
+    #cursos-cards p{
+    display: block;
+    }
+    #cursos-cards .cards{
+    padding: 20px;
+    }
+
+    #cursos-cards h3{
+    margin-top: 0;
+    }
+
+    #caracteristicas{
+    background-image: url("2.jpg");
+    background-repeat: no-repeat;
+    background-size: 550px 320px;
+    background-position: calc(100vw - 900px) 110px;
+    margin-bottom: 100px;   
+    }
+
+
+
+    #caracteristicas .container{
+        text-align: initial;
+    }
+
+
+    #caracteristicas .container ul li{
+        margin-top: 10px;
+        justify-content: center;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    @media (min-width: 900px){
+    #caracteristicas{
+    background-position-x: calc(100vw - 600px);
+        }
+    }
+
+}
+
+/* sección de estilos del footer 
+
+footer p{
+    margin: 0;
+    font-family: sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0px;
+    padding: 12px;
+    color: #ffffff;
+}
+
+footer .container{
+    height: 50px;
+    line-height: 30px;
+    background: #fc1313;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+*/
+
+
+
