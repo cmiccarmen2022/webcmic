@@ -196,7 +196,7 @@ nav ul li ul li a {
 
 .title h3{
     font-family: sans-serif;
-    font-size: 15px;
+    font-size: 17px;
     letter-spacing: 1px;
     margin-top: 10px;
 }
@@ -278,173 +278,211 @@ label {
 
 /* Comenzamos a estilar el contenido general de la página principal */
 
-    .texto h2{
-        font-size: 18px;
-        margin-bottom: 20px;
-    }
+.texto h2{
+    font-size: 18px;
+    margin-bottom: 20px;
+}
 
 
-    ul{
+ul{
     list-style: none;
-    }
+}
 
-    .colorh2{
+.colorh2{
     color: #581353;
-    }
+}
 
-    button{
-    font-size: 12px;
-    font-weight: bold;
-    padding: 10px 20px;
-    border-radius: 10px;
-    border: 1px solid #000000;
-    box-shadow: 2px 2px 9px #ffffff;
+/* Estilos para botón con efecto hover */
+button {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+    border-radius: 5px;
+    border: transparent;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    z-index: 1;
+    box-shadow: 2px 2px 7px #fff;
+}
+
+button::before,
+button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 0;
+    height: 100%;
+    transform: skew(15deg);
+    transition: all 0.5s;
+    overflow: hidden;
+    z-index: -1;
+}
+
+button::before {
+    left: -10px;
+    background: #c7122a;
+}
+
+button::after {
+    right: -10px;
+    background: #df1637;
+}
+
+button:hover::before,
+button:hover::after {
+    width: 58%;
+}
+
+button:hover span {
     color: #ffffff;
-    background: linear-gradient(328deg, rgb(219, 24, 24) 35%, rgba(0,0,0,1) 65%);
-    }
+    transition: 0.3s;
+    font-weight: 600;
+}
 
-    button:hover{
-    color: #ffffff;
-    background: linear-gradient(328deg, rgba(0,0,0,1) 35%, rgb(219, 24, 24) 65%);
-    }
-    
+button span {
+    color: #000000;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.3s ease-in;
+}
 
 
-    .container{
+.container{
     max-width: 1200px;
     margin: auto;
-    }    
+}    
 
-    #Somos-English .container{
+#somos-cmic .container{
     text-align: center;
     padding: 100px 12px;
-    }
+}
 
-    .colorh2{
-        color: #ff2020;
-    }
+.colorh2{
+    color: #ff2020;
+}
 
-    #cursos-cards{
+#cursos-cards{
     background-color: #000000;
     color: #ffffff;
     text-align: center;
-    }
+}
 
-    #cursos-cards .container{
+#cursos-cards .container{
     padding: 120px 12px;
-    }
+}
 
-    #cursos-cards h2{
+#cursos-cards h2{
     margin-top: 0;
     font-size: 20px;
     margin-bottom: 30px;
-    }
+}
 
     
-    #cursos-cards h3{
+#cursos-cards h3{
     font-family: sans-serif;
     font-size: 16px;
     
-    }
+}
 
-    #cursos-cards p{
+#cursos-cards p{
     margin-top: 5px;
     font-size: 13px;
     display: none;
     text-align: justify;
-    }
+}
 
-    #cursos-cards .cards button{
-        margin-top: 10px;
-    }
+#cursos-cards .cards button{
+    margin-top: 10px;
+}
 
-    #cursos-cards .cards{
+#cursos-cards .cards{
     background-position: center center;
     background-size: cover;
     padding: 50px 0px;
     margin: 40px; 
     border-radius: 15px;
-    }
+}
 
-    .cards:first-child{
+.cards:first-child{
     background-image: linear-gradient(
     0deg,
     rgba(0,0,0,0.8),
     rgba(0,0,0,0.8)
     )
     ,url("logo-oficial.jpg");    
-    }
+}
 
-    .cards:nth-child(2){
+.cards:nth-child(2){
     background-image: linear-gradient(
     0deg,
     rgba(0,0,0,0.8),
     rgba(0,0,0,0.8)
     )
     ,url("logo-oficial.jpg");
-    }
+}
 
-    .cards:nth-child(3){
+.cards:nth-child(3){
     background-image: linear-gradient(
     0deg,
     rgba(0,0,0,0.8),
     rgba(0,0,0,0.8)
     )
     ,url("logo-oficial.jpg");
-    }
+}
 
-    #caracteristicas .container{
+#caracteristicas .container{
     text-align: center;
     padding: 150px 12px;
-    }
+}
 
 
-    i{
-        margin-right: 10px;
-    }
+i{
+    margin-right: 10px;
+}
 
-    #aplica{
+#aplica{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #000000;
+    background-color: #1f1f1f;
     color: #ffffff;
     height: 50vh;
     margin-bottom: 0px;
-    }
+}
 
-    #aplica h2{
-        font-size: 19px;
-    }
-    #aplica button{
-        margin-top: 20px;
-    }
+#aplica h2{
+    font-size: 19px;
+}
+#aplica button{
+    margin-top: 20px;
+}
 
-    #caracteristicas .container{
-        width: 90%;
-        margin: auto;
-    }
+#caracteristicas .container{
+    width: 90%;
+    margin: auto;
+}
 
-    li{
-        font-size: 15px;
-    }
+li{
+    font-size: 15px;
+}
 
-    #caracteristicas .container ul li{
-        margin-top: 10px;
-    }
+#caracteristicas .container ul li{
+    margin-top: 10px;
+}
 
 
 
-    @media (min-width: 900px){
+@media (min-width: 900px){
 
-    #Somos-English .container{
+#somos-cmic .container{
     display: flex;
     justify-content: center;
-    }
+}
 
-    #Somos-English .img-container{
+#somos-cmic .img-container{
     background-image: linear-gradient(
     0deg,
     rgba(0,0,0,0.2),
@@ -456,9 +494,9 @@ label {
     height: 300px;
     width: 480px;  
     border-radius: 10px; 
-    }
+}
 
-    #Somos-English .texto{
+#somos-cmic .texto{
     width: 50%;
     max-width: 600px;
     text-align: justify;
@@ -467,56 +505,56 @@ label {
     flex-direction: column;
     justify-content: center;
     padding-left: 50px;
-    }
+}
 
-    #cursos-cards .cursos{
+#cursos-cards .cursos{
     display: flex;
     justify-content: center;
-    }
+}
 
-    #cursos-cards p{
+#cursos-cards p{
     display: block;
-    }
-    #cursos-cards .cards{
+}
+
+#cursos-cards .cards{
     padding: 20px;
-    }
+}
 
-    #cursos-cards h3{
+#cursos-cards h3{
     margin-top: 0;
-    }
+}
 
-    #caracteristicas{
+#caracteristicas{
     background-image: url("2.jpg");
     background-repeat: no-repeat;
     background-size: 550px 320px;
     background-position: calc(100vw - 900px) 110px;
     margin-bottom: 100px;   
-    }
+}
 
 
 
-    #caracteristicas .container{
+#caracteristicas .container{
     text-align: initial;
-    }
+}
 
 
-    #caracteristicas .container ul li{
+#caracteristicas .container ul li{
     margin-top: 10px;
     justify-content: center;
     align-items: center;
     margin-left: 30px;
-    }
+}
 
-    @media (min-width: 900px){
+@media (min-width: 900px){
     #caracteristicas{
     background-position-x: calc(100vw - 600px);
         }
     }
-
 }
 
 
-/* ESTILIZACIÓN DE FOOTER */
+/* Estilización del footer */
 footer{
     background-color: #ff2020;
 }

@@ -5,6 +5,7 @@
 body{
     margin: 0;
     font-family: sans-serif;
+    background: #ffffff;
 }
 
 
@@ -17,7 +18,7 @@ html{
 header{
     display: flex;
     justify-content: space-between;
-    background: linear-gradient(90deg, rgb(255, 255, 255) 44%, rgb(255, 255, 255) 100%);
+    background: linear-gradient(90deg, rgb(255, 255, 255) 34%, rgb(189, 2, 167) 80%);
     align-items: center;
     padding: 10px;
 }
@@ -40,6 +41,12 @@ header h2{
     border-radius: 10px;
 }
 
+@media screen and (min-width: 900px){
+    header img{
+        margin-left: 60px;
+    }
+}
+
 h2{
     font-size: 15px;
     font-weight: 600;
@@ -47,20 +54,21 @@ h2{
 
 a{
     text-decoration: none;
-    color: #000000;
+    color: #ffffff;
     font-size: 13px;
 }
 
 .nav-link{
-    font-weight: 500;
-    margin-right: 10px;
-    padding: 18px 20px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-right: 5px;
+    padding: 18px 25px;
 }
 
 nav a:hover{
     transition: all 0.3s ease-in-out;
-    background-color: #f13ee8;
-    color: rgb(255, 255, 255);
+    background-color: #ffffff;
+    color: #e83dff;
     border-radius: 5px;
     text-decoration: none;
 }
@@ -105,6 +113,7 @@ button {
     overflow: hidden;
     transition: all 0.5s ease-in;
     z-index: 1;
+    box-shadow: 2px 2px 7px #fff;
 }
 
 button::before,
@@ -122,12 +131,12 @@ button::after {
 
 button::before {
     left: -10px;
-    background: #b659be;
+    background: #ca20da;
 }
 
 button::after {
     right: -10px;
-    background: #cb67f3;
+    background: #df47ec;
 }
 
 button:hover::before,
@@ -136,13 +145,15 @@ button:hover::after {
 }
 
 button:hover span {
-    color: #ececec;
+    color: #ffffff;
     transition: 0.3s;
+    font-weight: 600;
 }
 
 button span {
-    color: #03045e;
+    color: #000000;
     font-size: 13px;
+    font-weight: 600;
     transition: all 0.3s ease-in;
 }
 
@@ -178,6 +189,56 @@ background-position: center center;
 }
 
 
+
+/* Configuración de la sección uno */
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    }    
+
+    #somos-cmic .container{
+    text-align: center;
+    padding: 100px 12px;
+    }
+
+    .colorh2{
+        color: #ff20a2;
+    }
+
+    @media (min-width: 900px){
+
+        #somos-cmic .container{
+        display: flex;
+        justify-content: center;
+        }
+    
+        #somos-cmic .img-container{
+        background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.2),
+        rgba(0,0,0,0.2)
+        )
+        ,url("img_damas.jpg");
+        background-size: cover;
+        background-position: center center;
+        height: 300px;
+        width: 480px;  
+        border-radius: 10px; 
+        }
+    
+        #somos-cmic .texto{
+        width: 50%;
+        max-width: 600px;
+        text-align: justify;
+        padding: 0px 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 50px;
+        }
+    }
+
 /* ESTILIZACIÓN DE FOOTER */
 footer{
     background: radial-gradient(circle, rgba(251,63,237,1) 0%, rgba(214,0,255,1) 100%);
@@ -197,4 +258,59 @@ footer .container{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+/* From uiverse.io by @gagan-gv */
+.spinner {
+    height: 50px;
+    width: max-content;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: monospace;
+    letter-spacing: 1em;
+    color: #990d99;
+    filter: drop-shadow(0 0 10px);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner span {
+    animation: loading6454 1.75s ease infinite;
+}
+
+.spinner span:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.spinner span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.spinner span:nth-child(4) {
+    animation-delay: 0.75s;
+}
+
+.spinner span:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.spinner span:nth-child(6) {
+    animation-delay: 1.25s;
+}
+
+.spinner span:nth-child(7) {
+    animation-delay: 1.5s;
+}
+
+@keyframes loading6454 {
+    0%, 100% {
+    transform: translateY(0);
+    }
+
+    50% {
+    transform: translateY(-10px);
+    }
 }
