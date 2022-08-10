@@ -4,6 +4,10 @@
     background: #ffffff;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Quitamos margen y relleno de la página */
 *{
     margin: 0;
@@ -13,7 +17,7 @@
 
 .brand {
     position: absolute;
-    padding-left: 20px;
+    padding-left: 5px;
     float: left;
     line-height: 70px;
     text-transform: uppercase;
@@ -26,8 +30,9 @@
 }
 
 .brand a img{
-    height: 35px;
-    margin-top: 20px;
+    width: 130px;
+    height: 45px;
+    margin-top: 13px;
 }
 .nav-container {
     max-width: 1000px;
@@ -61,7 +66,7 @@ nav ul li a:visited {
 
 nav ul li a:hover,
 nav ul li a:visited:hover {
-    background: #d41d36;
+    background: #d41dd4;
     border-radius: 3px;
     color: #ffffff;
 }
@@ -112,7 +117,7 @@ nav ul li ul li a {
     }
     nav {
         width: 100%;
-        padding: 70px 0 15px;
+        padding: 55px 0 10px;
     }
     nav ul {
         display: none;
@@ -154,7 +159,7 @@ nav ul li ul li a {
     border-radius: 1px;
     height: 5px;
     width: 35px;
-    background: #0c021f;
+    background: #000000;
     position: absolute;
     display: block;
     content: "";
@@ -187,18 +192,87 @@ nav ul li ul li a {
 
 
 /* Estilización de la sección slider */
+.spinner {
+    height: 50px;
+    width: 38vw;
+    font-size: 17px;
+    font-weight: 600;
+    font-family: monospace;
+    letter-spacing: 1.5em;
+    color: #990d99;
+    filter: drop-shadow(0 0 25px);
+    margin: auto;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adaptamos la separación de las letras del spinner cuando lleguemos a tamaños de pantalla mas pequeños */
+
+@media screen and (max-width: 500px){
+    .spinner{
+        letter-spacing: 1em;
+    }
+    
+}
+
+.spinner span {
+    animation: loading6454 1.75s ease infinite;
+}
+
+.spinner span:nth-child(2) {
+    animation-delay: 0.25s;
+}
+
+.spinner span:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.spinner span:nth-child(4) {
+    animation-delay: 0.75s;
+}
+
+.spinner span:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.spinner span:nth-child(6) {
+    animation-delay: 1.25s;
+}
+
+.spinner span:nth-child(7) {
+    animation-delay: 1.5s;
+}
+
+@keyframes loading6454 {
+    0%, 100% {
+    transform: translateY(0);
+    }
+
+    50% {
+    transform: translateY(-10px);
+    }
+}
+
 
 #slider {
-    max-width: 500px;
+    max-width: 800px;
     text-align: center;
     margin: 0 auto;
+}
+
+@media screen and (max-width: 1400px){
+    #slider{
+        max-width: 500px;
+    }
 }
 
 .title h3{
     font-family: sans-serif;
     font-size: 17px;
     letter-spacing: 1px;
-    margin-top: 10px;
+    margin-top: 80px;
 }
 
 #overflow {
@@ -258,7 +332,7 @@ input[type="radio"] {
 
 label {
     margin: 5px;
-    background: #CCC;
+    background: rgb(230, 174, 243);
     display: inline-block;
     cursor: pointer;
     width: 20px;
@@ -271,13 +345,113 @@ label {
 #slide3:checked ~ label[for="slide3"],
 #slide4:checked ~ label[for="slide4"]
 {
-    background: #333;
+    background: #c846e2;
 }
 
 
+/* Estilos para efecto hero  */
+#hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: linear-gradient(
+    0deg, 
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.8)
+),
+    url("2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+    /* configuración de los titulos del hero */
+.titulo-hero{
+    margin: auto;
+}
+
+.titulo-hero h2.titulo2{
+    margin-top: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+
+.titulo-hero span.titulo1{
+    font-size: 20px;
+    font-weight: 600;
+    font-family: sans-serif;
+    color: #f361e7;
+}
+
+    /* Estilos para botones de la sección .titulo-hero*/
+.titulo-hero button {
+    margin-top: 10px;
+    padding: 10px 35px;
+    border: unset;
+    border-radius: 9px;
+    color: #000000;
+    z-index: 1;
+    background: #ffffff;
+    position: relative;
+    -webkit-box-shadow: 4px 8px 19px -6px rgba(255, 255, 255, 0.788);
+    box-shadow: 4px 8px 19px -6px  rgba(255, 255, 255, 0.788);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+.titulo-hero button span{
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    font-style: normal;
+}
+    
+.titulo-hero button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 9px;
+    background-color: #d05edf;
+    z-index: -1;
+    transition: all 250ms
+}
+
+.titulo-hero button:hover {
+    color: #e8e8e8;
+}
+
+.titulo-hero button:hover::before {
+    width: 100%;
+}
+
+    /* Adaptamos para pantallas pequeñas */
+
+@media screen and (max-width: 800px){
+    #hero{
+        width: 100%;
+        height: 95vh;
+        display: flex;
+    }
+
+    .titulo-hero{
+        margin: auto;
+    }
+
+    .titulo-hero h2{
+        font-family: sans-serif;
+        color: #ffffff;
+    }
+}
+
 
 /* Comenzamos a estilar el contenido general de la página principal */
-
 .texto h2{
     font-size: 18px;
     margin-bottom: 20px;
@@ -289,62 +463,13 @@ ul{
 }
 
 .colorh2{
+    font-weight: 600;
     color: #581353;
 }
 
-/* Estilos para botón con efecto hover */
-button {
-    display: inline-block;
-    width: 150px;
-    height: 30px;
-    border-radius: 5px;
-    border: transparent;
-    position: relative;
-    overflow: hidden;
-    transition: all 0.5s ease-in;
-    z-index: 1;
-    box-shadow: 2px 2px 7px #fff;
-}
-
-button::before,
-button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 0;
-    height: 100%;
-    transform: skew(15deg);
-    transition: all 0.5s;
-    overflow: hidden;
-    z-index: -1;
-}
-
-button::before {
-    left: -10px;
-    background: #c7122a;
-}
-
-button::after {
-    right: -10px;
-    background: #df1637;
-}
-
-button:hover::before,
-button:hover::after {
-    width: 58%;
-}
-
-button:hover span {
-    color: #ffffff;
-    transition: 0.3s;
+span.cmic-title{
     font-weight: 600;
-}
-
-button span {
-    color: #000000;
-    font-size: 13px;
-    font-weight: 600;
-    transition: all 0.3s ease-in;
+    color: #c23ad4;
 }
 
 
@@ -355,13 +480,15 @@ button span {
 
 #somos-cmic .container{
     text-align: center;
-    padding: 100px 12px;
+    padding:  100px 12px;
 }
 
 .colorh2{
-    color: #ff2020;
+    color: #d037e4;
 }
 
+
+/* Estilización para la sección cursos-cards y sus elementos */
 #cursos-cards{
     background-color: #000000;
     color: #ffffff;
@@ -369,7 +496,7 @@ button span {
 }
 
 #cursos-cards .container{
-    padding: 120px 12px;
+    padding: 160px 12px;
 }
 
 #cursos-cards h2{
@@ -410,7 +537,7 @@ button span {
     rgba(0,0,0,0.8),
     rgba(0,0,0,0.8)
     )
-    ,url("logo-oficial.jpg");    
+    ,url("5.jpg");    
 }
 
 .cards:nth-child(2){
@@ -419,7 +546,7 @@ button span {
     rgba(0,0,0,0.8),
     rgba(0,0,0,0.8)
     )
-    ,url("logo-oficial.jpg");
+    ,url("5.jpg");
 }
 
 .cards:nth-child(3){
@@ -428,18 +555,56 @@ button span {
     rgba(0,0,0,0.8),
     rgba(0,0,0,0.8)
     )
-    ,url("logo-oficial.jpg");
+    ,url("5.jpg");
 }
 
-#caracteristicas .container{
-    text-align: center;
-    padding: 150px 12px;
+/* Estilos para botones para la sección cursos-cards */
+#cursos-cards button {
+    margin-top: 10px;
+    padding: 10px 35px;
+    border: unset;
+    border-radius: 9px;
+    color: #000000;
+    z-index: 1;
+    background: #ffffff;
+    position: relative;
+    -webkit-box-shadow: 4px 8px 19px -6px rgba(255, 255, 255, 0.788);
+    box-shadow: 4px 8px 19px -6px  rgba(255, 255, 255, 0.788);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+#cursos-csrds button span{
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#cursos-cards button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 9px;
+    background-color: #d05edf;
+    z-index: -1;
+    transition: all 250ms
+}
+
+#cursos-cards button:hover {
+    color: #e8e8e8;
+}
+
+#cursos-cards button:hover::before {
+    width: 100%;
 }
 
 
-i{
-    margin-right: 10px;
-}
+
+/* Configuramos el apartado de aplica y sus diferentes elementos */
 
 #aplica{
     display: flex;
@@ -456,8 +621,60 @@ i{
 #aplica h2{
     font-size: 19px;
 }
-#aplica button{
-    margin-top: 20px;
+
+/* Estilos para botones de la sección aplica */
+#aplica button {
+    margin-top: 10px;
+    padding: 10px 35px;
+    border: unset;
+    border-radius: 9px;
+    color: #000000;
+    z-index: 1;
+    background: #ffffff;
+    position: relative;
+    -webkit-box-shadow: 4px 8px 19px -6px rgba(255, 255, 255, 0.788);
+    box-shadow: 4px 8px 19px -6px  rgba(255, 255, 255, 0.788);
+    transition: all 250ms;
+    overflow: hidden;
+}
+
+#aplica button span{
+    font-family: sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    font-style: normal;
+}
+
+#aplica button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    border-radius: 9px;
+    background-color: #d05edf;
+    z-index: -1;
+    transition: all 250ms
+}
+
+#aplica button:hover {
+    color: #e8e8e8;
+}
+
+#aplica button:hover::before {
+    width: 100%;
+}
+
+/* Comenzamos a estilar el apartado de caracteríticas */
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 190px 12px;
+}
+
+i{
+    margin-right: 10px;
 }
 
 #caracteristicas .container{
@@ -474,7 +691,7 @@ li{
 }
 
 
-
+/* Apaptamos el apartado somos-cmic a otras pantallas */
 @media (min-width: 900px){
 
 #somos-cmic .container{
@@ -528,7 +745,7 @@ li{
     background-image: url("2.jpg");
     background-repeat: no-repeat;
     background-size: 550px 320px;
-    background-position: calc(100vw - 900px) 110px;
+    background-position: calc(100vw - 900px) 90px;
     margin-bottom: 100px;   
 }
 
@@ -556,7 +773,7 @@ li{
 
 /* Estilización del footer */
 footer{
-    background-color: #ff2020;
+    background-color: #d451e0;
 }
 
 footer p{

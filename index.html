@@ -6,55 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio - Cmic Carmen</title>
     <link rel="stylesheet" href="nav.css">
-    <link rel="shortcut icon" href="logo-oficial.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="logocmdamas.jpg" type="image/x-icon">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" 
     integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 </head>
 <body>
 
 
-    <!-- Sección de barra de navegación -->
-    <div class="nav-container">
+    
+    <!-- Barra de navegación -->
+    <section class="navigation">
+        <div class="nav-container">
         <div class="brand">
-    <!-- Hacemos redireccionamiento a la página oficial de cmic delegación carmen -->
-        <a href="http://www.cmiccdcarmen.org/#" target="_blank"><img class="logo-oficial" src="logo-oficial.jpg" alt="Logo Oficial Cmic"></a>
+        <a href="http://www.cmiccdcarmen.org/"><img src="logocmdamas.jpg" alt="Logo Oficial Comité de Damas"></a>
         </div>
-
-    <!-- Empezamos a contruir nuestra navigation -->
         <nav>
         <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
         <ul class="nav-list">
         <li><a href="#!">Inicio</a></li>
-
-    <!-- Construimos el menú desplegable el cuál está funcionando mediante jquery para poder hacer el efecto de despliegue -->
         <li>
         <a href="#!">Servicios</a>
         <ul class="nav-dropdown">
         <li><a href="#!">Afiliación</a></li>
         <li><a href="#!">Capacitación</a></li>
-        <li><a href="#!">Renta de espacios</a></li>
+        <li><a href="#!">Información</a></li>
         </ul>
         </li>
 
-    <!-- Repetimos la misma secuencia del anterior dropdown -->
-        <li>
-        <a href="#!">Nosotros</a>
-        <ul class="nav-dropdown">
-        <li><a href="#!">Nuestra Historia</a></li>
-        <li><a href="#!">Código de Ética</a></li>
-        </ul>
-        </li>
-
-    <!-- Colocamos redireccionamiento al comité de damas -->
-        <li><a class="comite-damas" href="comite_damas.html">Comité de Damas</a></li>
-
-    <!-- Apartado de redes sociales -->
-        <li><a href="redes.html">Redes</a></li>
-
-    <!-- Mandamos a destruir la sesión mediante javascript y lo redireccionamos a php para borrar datos de navegación, sin funcionamiento por el momento -->
+        <li><a href="redes.html">Contacto</a></li>
         <li><a href="#!" onclick="salir()">Cerrar Sesión</a></li>
         </ul>
         </nav>
+        </div>
+        </section>
+
+    <!-- Contenido de imagen tipo hero, debajo de la barra de navegación -->
+        <div class="contenedor-img" id="hero">
+            <div class="titulo-hero">
+                <span class="titulo1">
+                COMITÉ DE DAMAS<br>
+                </span>
+                <h2 class="titulo2">DELEGACIÓN CARMEN</h2>
+            <form action="#cursos-cards">
+                <button><span>VAMOS ALLÁ</span></button>
+            </form>
+            </div>
         </div>
 
 
@@ -66,14 +62,29 @@
         <input type="radio" name="slider" id="slide4" selected="false">
         <div id="slides">
             <div id="overflow">
-                <div class="title"><h3>CMIC DELEGACIÓN CD. DEL CARMEN</h3></div>
-                <div class="inner">
-                    <img src="2.jpg">
-                    <img src="3.jpg">
-                    <img src="4.jpg">
-                    <img src="5.jpg">
-                </div>
-            </div>
+                    <!-- Efecto spinner del comité de damas -->
+    <div class="spinner">
+        <span>C</span>
+        <span>O</span>
+        <span>M</span>
+        <span>I</span>
+        <span>T</span>
+        <span>É</span>
+        <span>D</span>
+        <span>E</span>
+        <span>D</span>
+        <span>A</span>
+        <span>M</span>
+        <span>A</span>
+        <span>S</span>
+    </div>
+        <div class="inner">
+            <img src="2.jpg">
+            <img src="3.jpg">
+            <img src="4.jpg">
+            <img src="5.jpg">
+        </div>
+    </div>
         </div>
         <label for="slide1"></label>
         <label for="slide2"></label>
@@ -88,9 +99,9 @@
         <div class="container">
         <div class="img-container"></div>
         <div class="texto">
-        <h2>SOMOS <span class="colorh2">¡CMIC CARMEN!</span></h2>
+        <h2>SOMOS EL <span class="colorh2">¡COMITÉ DE DAMAS!</span></h2>
         <p>
-        La CMIC es una institución de interés público, autónoma, con personalidad jurídica y patrimonio propios, constituida para cumplir con las finalidades establecidas en la Ley de Cámaras Empresariales y sus Confederaciones, así como sus propios Estatutos. 
+        Realizamos aportación de carácter social a nuestro país, por las voluntarias y los contructores organizados de <span class="cmic-title">CMIC </span>en sus 44 delegaciones en la República. 
         </p>
         </div>
         </div>
@@ -99,11 +110,11 @@
         <!-- Sección de cartas para cursos cmic -->
         <section id="cursos-cards">
         <div class="container">     
-        <h2>NUESTROS CURSOS</h2>
+        <h2>NUESTROS TALLERES</h2>
 
         <div class="cursos">
         <div class="cards">
-        <h3>CMIC CARMEN</h3>
+        <h3>COMITÉ DE DAMAS</h3>
         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quisquam, facere vel hic distinctio temporibus veniam, doloribus ullam accusamus autem ut veritatis id aperiam minus! Sint minima unde itaque voluptatibus est!</p>
         <form action="cursocmic1.html" target="blanck">
         <button><span>INGRESAR</span></button>
@@ -111,7 +122,7 @@
         </div>
 
         <div class="cards">
-        <h3>CMIC CARMEN</h3>
+        <h3>COMITÉ DE DAMAS</h3>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam vitae incidunt quae, quisquam aliquid blanditiis nesciunt iusto assumenda corporis aut culpa beatae vero dicta, temporibus, reiciendis tenetur cumque ipsam consectetur.</p>
         <form action="cursocmic1.html">
         <button><span>INGRESAR</span></button>
@@ -119,7 +130,7 @@
         </div>
 
         <div class="cards">
-        <h3>CMIC CARMEN</h3>
+        <h3>COMITÉ DE DAMAS</h3>
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, sint quasi sequi dolor beatae eos autem ipsam dolore qui incidunt at laboriosam impedit dicta officiis labore saepe error accusantium. Animi.</p>           
         <form action="cursocmic1.html">
         <button><span>INGRESAR</span></button>
@@ -134,16 +145,14 @@
         <div class="container">
         <ul>
         <li> <i class="fas fa-mail-bulk fa-1x"></i>CP. 24120</li>
-        <li> <i class="fas fa-phone fa-1x"></i>9383825997</li>
-        <li> <i class="fas fa-address-book fa-1x"></i>contactocmic@cmiccdcarmen.org</li>
-        <li> <i class="fas fa-city fa-1x"></i>CD. DEL CARMEN, CAMP.</li>
+        <li> <i class="fas fa-city fa-1x"></i>CD. DEL CARMEN, CAMPECHE.</li>
         </ul>
         </div>
         </section>
 
         <section id="aplica">
         <h2>¡CONOCE MÁS SOBRE NUESTRO COMITÉ DE DAMAS!</h2>
-        <form action="comite_damas.html" target="blank">
+        <form action="cursocmic1.html" target="blank">
         <button><span>¡PRESIONA AQUÍ!</span></button> 
         </form>
         </section>
