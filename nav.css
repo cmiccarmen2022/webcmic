@@ -191,70 +191,6 @@ nav ul li ul li a {
     }
 
 
-/* Estilización de la sección slider */
-.spinner {
-    height: 50px;
-    width: 38vw;
-    font-size: 17px;
-    font-weight: 600;
-    font-family: monospace;
-    letter-spacing: 1.5em;
-    color: #990d99;
-    filter: drop-shadow(0 0 25px);
-    margin: auto;
-    margin-top: 60px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Adaptamos la separación de las letras del spinner cuando lleguemos a tamaños de pantalla mas pequeños */
-
-@media screen and (max-width: 500px){
-    .spinner{
-        letter-spacing: 1em;
-    }
-    
-}
-
-.spinner span {
-    animation: loading6454 1.75s ease infinite;
-}
-
-.spinner span:nth-child(2) {
-    animation-delay: 0.25s;
-}
-
-.spinner span:nth-child(3) {
-    animation-delay: 0.5s;
-}
-
-.spinner span:nth-child(4) {
-    animation-delay: 0.75s;
-}
-
-.spinner span:nth-child(5) {
-    animation-delay: 1s;
-}
-
-.spinner span:nth-child(6) {
-    animation-delay: 1.25s;
-}
-
-.spinner span:nth-child(7) {
-    animation-delay: 1.5s;
-}
-
-@keyframes loading6454 {
-    0%, 100% {
-    transform: translateY(0);
-    }
-
-    50% {
-    transform: translateY(-10px);
-    }
-}
-
 
 #slider {
     max-width: 800px;
@@ -268,13 +204,15 @@ nav ul li ul li a {
     }
 }
 
-.title h3{
+#slider h2{
+    margin-top: 30px;
+    color: #d037e4;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 7px;
     font-family: sans-serif;
-    font-size: 17px;
-    letter-spacing: 1px;
-    margin-top: 80px;
-}
 
+}
 #overflow {
     width: 100%;
     overflow: hidden;
@@ -345,7 +283,7 @@ label {
 #slide3:checked ~ label[for="slide3"],
 #slide4:checked ~ label[for="slide4"]
 {
-    background: #c846e2;
+    background: #b513e7;
 }
 
 
@@ -358,8 +296,8 @@ label {
     text-align: center;
     background-image: linear-gradient(
     0deg, 
-    rgba(0,0,0,0.8),
-    rgba(0,0,0,0.8)
+    rgba(0,0,0,0.3),
+    rgba(0,0,0,0.3)
 ),
     url("2.jpg");
     background-repeat: no-repeat;
